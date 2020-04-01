@@ -247,6 +247,7 @@ public class VoiceConnectionService extends ConnectionService {
         HashMap<String, String> extrasMap = this.bundleToMap(extras);
         extrasMap.put(EXTRA_CALL_NUMBER, request.getAddress().toString());
         VoiceConnection connection = new VoiceConnection(this, extrasMap);
+        connection.setConnectionProperties(Connection.PROPERTY_SELF_MANAGED);
         connection.setConnectionCapabilities(Connection.CAPABILITY_MUTE | Connection.CAPABILITY_SUPPORT_HOLD);
         connection.setInitializing();
         connection.setExtras(extras);
