@@ -72,11 +72,6 @@ class RNCallKeep {
   };
 
   startCall = (uuid, handle, contactIdentifier, handleType = 'number', hasVideo = false ) => {
-    if (!isIOS) {
-      RNCallKeepModule.startCall(uuid, handle, contactIdentifier);
-      return;
-    }
-
     RNCallKeepModule.startCall(uuid, handle, contactIdentifier, handleType, hasVideo);
   };
 
