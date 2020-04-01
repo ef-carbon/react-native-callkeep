@@ -455,7 +455,7 @@ RCT_EXPORT_METHOD(sendDTMF:(NSString *)uuidString dtmf:(NSString *)key)
 #ifdef DEBUG
     NSLog(@"[RNCallKeep][configureAudioSession] Activating audio session");
 #endif
-
+    return; // skip
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
 
