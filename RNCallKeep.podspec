@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.platform            = :ios, "8.0"
   s.source_files        = "ios/RNCallKeep/*.{h,m}"
+  s.ios.frameworks = 'CallKit'
+  s.weak_frameworks = 'Intents'
   s.dependency 'React'
 end
 
