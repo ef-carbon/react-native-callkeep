@@ -294,10 +294,10 @@ RCT_EXPORT_METHOD(sendDTMF:(NSString *)uuidString dtmf:(NSString *)key)
                 callUpdate.remoteHandle = startCallAction.handle;
                 callUpdate.hasVideo = startCallAction.video;
                 callUpdate.localizedCallerName = startCallAction.contactIdentifier;
-                callUpdate.supportsDTMF = YES;
-                callUpdate.supportsHolding = YES;
-                callUpdate.supportsGrouping = YES;
-                callUpdate.supportsUngrouping = YES;
+                callUpdate.supportsDTMF = NO;
+                callUpdate.supportsHolding = NO;
+                callUpdate.supportsGrouping = NO;
+                callUpdate.supportsUngrouping = NO;
                 [self.callKeepProvider reportCallWithUUID:startCallAction.callUUID updated:callUpdate];
             }
         }
